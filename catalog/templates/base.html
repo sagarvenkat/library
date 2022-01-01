@@ -1,0 +1,19 @@
+<html>
+<head>
+ {% block fi %} <title> Local Library </title> {% endblock %}
+</head>
+<body>
+ <div>
+  {% block a %}
+      <ul>
+          <li> <a href="{% url 'index' %}"> Home </a> </li>
+          <li> <a href="{% url 'books' %}"> All books </a> </li>
+          <li> <a href="{% url 'author' %}"> All Authors </a> </li>
+       </ul>
+  {% endblock %}
+ </div>
+ <div>
+    {% block c%} {% endblock %}
+ </div>
+</body>
+</html>

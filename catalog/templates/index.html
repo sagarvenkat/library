@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block fi %} <title> yesss </title> {% endblock %}
+{% block c %}
+ <h1> Local library home </h1>
+ <p> welcome to locallibrary</p> 
+ <p> library has following record counts: </p>
+  <ul>
+     <li><b> Books </b> {{n_b}} </li>
+     <li><b> Copies </b> {{n_i}} </li>
+     <li> <b> Available books </b> {{n_i_a}} </li>
+     <li> <b> Authors </b> {{n_a}} </li> 
+  </ul>
+{%endblock %}
+

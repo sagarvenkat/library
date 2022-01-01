@@ -1,0 +1,10 @@
+<html>
+ <head> <title> form </title>
+<body>
+ <form action='k/' method="post">
+    {% csrf_token %}
+    {{f.as_p}}
+  <input type="submit" value="Submit">
+ </form>
+</body>
+</html>

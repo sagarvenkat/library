@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block c %}
+
+  {% if form.errors %} 
+    <p> didnt match </p>
+  {% endif %}
+
+  {% if next %}
+      {% if user.is_authenticated %}
+         <p> authenticated </p>
+      {% else %}
+          <p> not authenticated </p>
+  {% endif %}
+  {% endif %}
+  <form action="{% url 'login' %}" method="post">
+  {% csrf_token %}
+   {{form.username.label_tag}}<br/>
+   {{form.username}} <br/>
+   {{form.password.label_tag}}<br/>
+   {{form.password}}
+   <input type="submit" value = "login">
+   <input type="hidden" name="next" value="{{next}}"> 
+  </form>
+ <p> <a href="{% url 'password_reset' %}"> Reset password </a> </p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block c %}
+ <h1> Title : {{book.title}} </h1>
+ <p> Author : {{book.author}} </p>
+ <p> Summary : {{book.summary}} </p>
+ <p> ISBN : {{book.isbn}} </p>
+ <p> Language: {{book.language}} </p>
+ <p> Genre : {{book.genre.all}} </p>
+
+  </h1> copies </h1>
+ {% for c in book.bookinstance_set.all %}
+ <h1> {{c.get_status_display}} </h1>
+ {% endfor %}
+{% endblock %}
